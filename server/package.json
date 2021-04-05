@@ -1,0 +1,43 @@
+{
+	"dependencies": {
+		"aws-sdk": "^2.781.0",
+		"bcrypt": "^5.0.1",
+		"chai": "^4.2.0",
+		"chai-http": "^4.3.0",
+		"connect-mongo": "^3.2.0",
+		"cookie-parser": "^1.4.5",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"eslint-plugin-autofix": "^1.0.3",
+		"express": "^4.17.1",
+		"express-session": "^1.17.1",
+		"jsonwebtoken": "^8.5.1",
+		"mocha": "^8.2.1",
+		"mongodb": "^3.6.3",
+		"mongoose": "^5.10.11",
+		"mongoose-paginate": "^5.0.3",
+		"multer": "^1.4.2",
+		"nodemon": "^2.0.6"
+	},
+	"scripts": {
+		"start": "nodemon app.js",
+		"test": "mocha"
+	},
+	"devDependencies": {
+		"eslint": "^7.22.0",
+		"eslint-config-airbnb-base": "^14.2.1",
+		"eslint-config-node": "^4.1.0",
+		"eslint-config-prettier": "^8.1.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^3.3.1",
+		"prettier": "^2.2.1"
+	},
+	"eslintConfig": {
+		"settings": {
+			"react": {
+				"version": "999.999.999"
+			}
+		}
+	}
+}
