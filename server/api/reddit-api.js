@@ -260,7 +260,8 @@ module.exports = (app) => {
     commentVoteState(post.comments);
     res.json(postVote[0]);
   });
-  const upload = multer();
+  const storage = multer.memoryStorage();
+  const upload = multer({ storage: storage });
   app.post("/api/post/new", upload.single("file"), async (req, res) => {
     let locationUrl;
     AWS.config.setPromisesDependency();
