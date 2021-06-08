@@ -12,7 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router history={history}>
-        <Route component={App} />
+        <Route>
+          <App />
+        </Route>
       </Router>
     </Provider>
   </React.StrictMode>,

@@ -77,7 +77,7 @@ function Home(props) {
       dispatch(
         fetchPosts(query, id, params.sort === "post" ? null : params)
       ).then((data) => {
-        if (data === 200) {
+        if (data.posts.length > 0) {
           setDataLoaded(true);
         }
       });

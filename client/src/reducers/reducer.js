@@ -272,7 +272,7 @@ function receievePosts(state, action) {
     allIds: [...set],
   };
 }
-function posts(
+export function posts(
   state = {
     isFetching: false,
     byId: {},
@@ -680,4 +680,5 @@ const rootReducer = combineReducers({
   currentUser,
   listings,
 });
+
 export default rootReducer;

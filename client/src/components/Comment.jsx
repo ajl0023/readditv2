@@ -9,12 +9,14 @@ import downvote, {
   ReactComponent as DownArrow,
 } from "../images/down-arrow.svg";
 import upvote, { ReactComponent as UpArrow } from "../images/up-arrow.svg";
+import { comment } from "../schemas";
 const Comment = ({ comment, handleShowLogin }) => {
   const [lines, setLines] = useState([]);
   const checkDisplay = useSelector((state) => {
     return state.display.display;
   });
   const loggedIn = useSelector((state) => state.login.isLoggedIn);
+
   const dispatch = useDispatch();
   const [replyText, setReplyText] = useState("");
   const [replyToggle, setReplyToggle] = useState(false);

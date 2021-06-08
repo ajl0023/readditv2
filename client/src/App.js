@@ -10,6 +10,8 @@ import NewPost from "./components/NewPost";
 import PostModal from "./components/PostModal";
 import Signup from "./components/Signup";
 import "./styles/myApp.scss";
+import { render, fireEvent } from "@testing-library/react";
+
 function App(props) {
   const [showLogin, setLogin] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
@@ -51,6 +53,7 @@ function App(props) {
   const handleShowNextPage = (lastId, sort) => {
     dispatch(nextPage(lastId, sort));
   };
+
   return (
     <div
       id="scroll-wrapper"
@@ -83,7 +86,7 @@ function App(props) {
             return <NewPost {...props} />;
           }}
         >
-          {!fetchingLogin && !props.loggedIn ? <Redirect to="/" /> : null}
+          {!fetchingLogin && !loggedInStatus ? <Redirect to="/" /> : null}
         </Route>
         <Route
           path={["/:sort", "/"]}
@@ -105,10 +108,4 @@ function App(props) {
     </div>
   );
 }
-function mapStateToProps(state, ownProps) {
-  let loggedInStatus = state.login.isLoggedIn;
-  return {
-    loggedIn: loggedInStatus,
-  };
-}
-export default connect(mapStateToProps)(App);
+export default App;

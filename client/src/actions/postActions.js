@@ -1,6 +1,8 @@
 import axios from "axios";
 import { normalize } from "normalizr";
 import { post } from "../schemas";
+import "cross-fetch/polyfill";
+
 import {
   DELETE_POST,
   EDIT_POST,
@@ -19,10 +21,11 @@ import {
   SORT_POSTS,
   VOTE_CAST,
 } from "../types";
+
 function requestPosts(e) {
   return {
     type: REQUEST_POSTS,
-    e,
+    
   };
 }
 function submitPostSuccess(post) {
@@ -144,22 +147,27 @@ export function editPost(postId, content) {
     });
   };
 }
+
 export function fetchPosts(query, id, params, e) {
   return (dispatch) => {
     dispatch(requestPosts(e));
-    return new Promise((resolve, reject) => {
-      axios({
-        url: `/api/posts/${params && params.sort ? params.sort : ""}${
+    return axios
+      .get(
+        `/api/posts/${params && params.sort ? params.sort : ""}${
           query ? `?${query}=${id}` : ""
         }`,
-        method: "GET",
-        withCredentials: true,
-      }).then((res) => {
-        resolve(res.status);
+        {
+          withCredentials: true,
+        }
+      )
+      .then((res) => {
+        
         const normalizedData = getNormalizeData(
           { posts: res.data.posts },
           params
         );
+      
+
         dispatch({
           type:
             params && params.sort && e === "click" ? SORT_POSTS : RECEIVE_POSTS,
@@ -167,8 +175,8 @@ export function fetchPosts(query, id, params, e) {
           offset: res.data.offset,
           sort: params && params.sort ? params.sort : "default",
         });
+        return res.data;
       });
-    });
   };
 }
 export function prevPage(id, params) {

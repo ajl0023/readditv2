@@ -81,7 +81,7 @@ const PostModal = (props) => {
   const postComments = currentPost.comments.map((id) => {
     return comments[id];
   });
-  if (postComments.length > 1) {
+  if (postComments.length > 0) {
     findAllComments(postComments);
   }
   return (
@@ -250,17 +250,18 @@ const PostModal = (props) => {
               Comments
             </h4>
             <div className="main-comment-container">
-              {props.post.comments.length > 0 &&
-                commentsArr.map((comment) => {
-                  return (
-                    <Comment
-                      allComments={comments}
-                      handleShowLogin={props.handleShowLogin}
-                      key={comment._id}
-                      comment={comment}
-                    />
-                  );
-                })}
+              {console.log(commentsArr)}
+              {commentsArr.map((comment) => {
+                console.log(comment);
+                return (
+                  <Comment
+                    allComments={comments}
+                    handleShowLogin={props.handleShowLogin}
+                    key={comment._id}
+                    comment={comment}
+                  />
+                );
+              })}
             </div>
           </>
         ) : null}
