@@ -20,7 +20,7 @@
 		"nodemon": "^2.0.6"
 	},
 	"scripts": {
-		"start": "nodemon app.js",
+		"start": "node app.js",
 		"test": "mocha"
 	},
 	"devDependencies": {
