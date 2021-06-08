@@ -1,3 +1,3 @@
 git add . 
-git commit -m "testing with diff config"
+git commit -m "filename change"
 git push origin master
