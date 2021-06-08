@@ -9,7 +9,6 @@ describe("First Test", function () {
       .request(baseUrl)
       .get("/api/post/5faf5975a2d1652e24c99a0e")
       .end(function (err, res) {
-        console.log(res.body);
         expect(res).to.have.status(200);
         expect(res.body.title).to.equal("dsdsdsd");
         done();

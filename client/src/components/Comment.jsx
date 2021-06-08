@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  changeCommentPoint,
-  newReply,
-  newReplyRequest,
+    changeCommentPoint,
+    newReply,
+    newReplyRequest
 } from "../actions/commentActions";
 import downvote, {
-  ReactComponent as DownArrow,
+    ReactComponent as DownArrow
 } from "../images/down-arrow.svg";
 import upvote, { ReactComponent as UpArrow } from "../images/up-arrow.svg";
-import { comment } from "../schemas";
 const Comment = ({ comment, handleShowLogin }) => {
   const [lines, setLines] = useState([]);
   const checkDisplay = useSelector((state) => {

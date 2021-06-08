@@ -1,3 +1,4 @@
+import Brightness2OutlinedIcon from "@material-ui/icons/Brightness2Outlined";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
@@ -6,8 +7,7 @@ import { logOut } from "../actions/userActions";
 import searchicon from "../images/magnifying-glass.svg";
 import defaultPic from "../images/reddit-default.svg";
 import triangle from "../images/Triangle.svg";
-import { DARK_MODE_ENABLED, DARK_MODE_DISABLED } from "../types";
-import Brightness2OutlinedIcon from "@material-ui/icons/Brightness2Outlined";
+import { DARK_MODE_DISABLED, DARK_MODE_ENABLED } from "../types";
 function Navbar(props) {
   const [dropdown, setDropDown] = useState(false);
   const [searchInput, setSearchInput] = useState("");

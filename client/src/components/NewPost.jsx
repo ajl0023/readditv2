@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import { changePostSubmissionType, submitPost } from "../actions/postActions";
-import { loggedIn, loginStatus } from "../actions/userActions";
 const NewPost = () => {
   const useQuery = () => {
     return new URLSearchParams(useLocation().search);

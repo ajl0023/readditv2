@@ -1,15 +1,15 @@
 import axios from "axios";
 import {
-  CLEAR_LOGIN_MODAL,
-  CURRENT_USER,
-  LOGIN_REQUEST,
-  LOGIN_SUCCESS,
-  LOG_OUT,
-  REQUEST_USER_INFO,
-  SIGNUP_ERROR,
-  SIGNUP_REQUEST,
-  SIGNUP_SUCCESS,
-  UNAUTHORIZED_ERROR,
+    CLEAR_LOGIN_MODAL,
+    CURRENT_USER,
+    LOGIN_REQUEST,
+    LOGIN_SUCCESS,
+
+    REQUEST_USER_INFO,
+    SIGNUP_ERROR,
+    SIGNUP_REQUEST,
+    SIGNUP_SUCCESS,
+    UNAUTHORIZED_ERROR
 } from "../types";
 let retryCount = 0;
 axios.interceptors.request.use((config) => {

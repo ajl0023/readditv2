@@ -1,13 +1,11 @@
+import axios from "axios";
+import expect from "expect"; // You can use any testing library
+import { createStore } from "redux";
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
-import * as actions from "./postActions";
+import rootReducer, { posts } from "../reducers/reducer";
 import * as types from "../types";
-import fetchMock from "fetch-mock";
-import expect from "expect"; // You can use any testing library
-import { posts } from "../reducers/reducer";
-import axios from "axios";
-import rootReducer from "../reducers/reducer";
-import { createStore } from "redux";
+import * as actions from "./postActions";
 const middlewares = [thunk];
 const store = createStore(rootReducer);
 const mockStore = configureMockStore(middlewares);

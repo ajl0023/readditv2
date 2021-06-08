@@ -162,7 +162,6 @@ const voteDown = (post, user, foundComment) => {
 };
 module.exports = (app) => {
   app.get("/api/posts", async (req, res) => {
-    console.log(1);
     const { query, sortOrder } = await checkQuery(req);
     posts = await Post.find(query)
       .populate("author", "username")

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { nextPage } from "./actions/postActions";
 import { clearLoginModal, loggedIn } from "./actions/userActions";
@@ -10,7 +10,6 @@ import NewPost from "./components/NewPost";
 import PostModal from "./components/PostModal";
 import Signup from "./components/Signup";
 import "./styles/myApp.scss";
-import { render, fireEvent } from "@testing-library/react";
 
 function App(props) {
   const [showLogin, setLogin] = useState(false);

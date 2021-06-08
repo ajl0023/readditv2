@@ -1,10 +1,10 @@
 import axios from "axios";
 import {
-  NEW_COMMENT_REQUEST,
-  NEW_COMMENT_SUCCESS,
-  NEW_REPLY_REQUEST,
-  NEW_REPLY_SUCCESS,
-  VOTE_CAST,
+    NEW_COMMENT_REQUEST,
+    NEW_COMMENT_SUCCESS,
+    NEW_REPLY_REQUEST,
+    NEW_REPLY_SUCCESS,
+    VOTE_CAST
 } from "../types";
 export function newCommentRequest() {
   return {

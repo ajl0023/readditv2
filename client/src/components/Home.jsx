@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useParams, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import {
-  fetchPosts,
-  fetchSinglePost,
-  newPostSubmissionType,
-  nextPage,
-  submitPostAttempt,
+    fetchPosts,
+    fetchSinglePost,
+    newPostSubmissionType,
+    nextPage,
+    submitPostAttempt
 } from "../actions/postActions";
 import imagePost from "../images/image-placeholder.svg";
 import linkPost from "../images/link-post.svg";

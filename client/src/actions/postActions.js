@@ -1,26 +1,26 @@
 import axios from "axios";
+import "cross-fetch/polyfill";
 import { normalize } from "normalizr";
 import { post } from "../schemas";
-import "cross-fetch/polyfill";
-
 import {
-  DELETE_POST,
-  EDIT_POST,
-  NEW_POST_REQUEST,
-  NEW_POST_SUCCESS,
-  NEXT_PAGE,
-  POST_CREATION_CHANGE_SUBMISSION_TYPE,
-  PREV_PAGE,
-  RECEIVE_POSTS,
-  RECEIVE_SINGLE_POSTS,
-  REQUEST_POSTS,
-  REQUEST_SINGLE_POST,
-  RESET_POST,
-  SET_POST,
-  SET_POST_MODAL,
-  SORT_POSTS,
-  VOTE_CAST,
+    DELETE_POST,
+    EDIT_POST,
+    NEW_POST_REQUEST,
+    NEW_POST_SUCCESS,
+    NEXT_PAGE,
+    POST_CREATION_CHANGE_SUBMISSION_TYPE,
+    PREV_PAGE,
+    RECEIVE_POSTS,
+    RECEIVE_SINGLE_POSTS,
+    REQUEST_POSTS,
+    REQUEST_SINGLE_POST,
+    RESET_POST,
+    SET_POST,
+    SET_POST_MODAL,
+    SORT_POSTS,
+    VOTE_CAST
 } from "../types";
+
 
 function requestPosts(e) {
   return {

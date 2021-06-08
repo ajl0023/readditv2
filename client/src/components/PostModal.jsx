@@ -4,7 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { newComment } from "../actions/commentActions";
 import { changePoint, editPost } from "../actions/postActions";
 import downvote, {
-  ReactComponent as DownArrow,
+    ReactComponent as DownArrow
 } from "../images/down-arrow.svg";
 import { ReactComponent as Edit } from "../images/edit.svg";
 import upvote, { ReactComponent as UpArrow } from "../images/up-arrow.svg";
@@ -250,9 +250,9 @@ const PostModal = (props) => {
               Comments
             </h4>
             <div className="main-comment-container">
-              {console.log(commentsArr)}
+              {
               {commentsArr.map((comment) => {
-                console.log(comment);
+                
                 return (
                   <Comment
                     allComments={comments}
