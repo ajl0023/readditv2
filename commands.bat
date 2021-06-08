@@ -1,3 +1,3 @@
 git add . 
-git commit -m "testing with vercel.json"
+git commit -m "testing with diff config"
 git push origin master
