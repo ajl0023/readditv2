@@ -1,3 +1,3 @@
 git add . 
-git commit -m "vercel implementation"
+git commit -m "testing without vercel.json"
 git push origin master
