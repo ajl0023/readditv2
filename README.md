@@ -1,4 +1,5 @@
-Demo: https://glacial-springs-16952.herokuapp.com/
+Demo: https://readditv2.vercel.app/
 
 # readit
+
 Built with mongodb,express,redux,react,
